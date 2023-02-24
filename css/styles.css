@@ -119,11 +119,13 @@ h1 {
 }
 
 .attribution {
+    margin-top: 1rem;
+    bottom: 0.5rem;
     position: absolute;
-    bottom: 1rem;
     text-align: center;
     color: var(--desaturated-blue);
-    font-size: 0.9rem;
+    font-size: .9rem;
+    opacity: 90%;
 }
   .attribution a {
     color: var(--dark-blue);
