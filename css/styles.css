@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    /* primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --brigth-blue: hsl(245, 75%, 52%);
+    /*Neutral*/
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--pale-blue);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    background-size: contain;
+}
+
+body, .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 25rem;
+    box-shadow: 0 .5rem 2rem -.8rem var(--desaturated-blue);
+    margin: 1rem;
+
+}
+.card-container {
+    gap: 1.5rem;
+    flex-direction: column;
+    margin: 2rem
+}
+
+.card-img {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+.description {
+    text-align: center;
+    margin: 0 .5rem;
+    line-height: 1.5rem;
+}
+
+.text {
+    color: var(--desaturated-blue);
+}
+
+.textbold {
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.prices {
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.container ~ a {
+    color: var(--brigth-blue);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.btn:hover, .container ~ a:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--brigth-blue);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--very-pale-blue);
+    width: 100%;
+    padding: .9rem 0;
+    font-family: "Red Hat Display";
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 .5rem .8rem .3rem var(--pale-blue);
+}
+
+.btn ~ p {
+    font-weight: 700;
+}
+
+.btn ~ p:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+}
+  .attribution a {
+    color: var(--dark-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+  .attribution a:hover {
+    color: var(--brigth-blue)
+}
+  
+  @media (max-height: 740px) {
+    body {
+      flex-direction: column;
+    }
+    .attribution {
+      position: unset;
+    } 
+}
+
+@media (max-width: 375px ) {
+    .card-container {
+        margin: 1.5rem;
+    }
+}
+ 
